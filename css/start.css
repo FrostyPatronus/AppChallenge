@@ -1,13 +1,28 @@
 /*
 -------------------------------------------
 THIS IS THE CSS FOR THE START ANIMATION. 
+-------------------------------------------
+*/
 
+/*
+--------------------------------------------------------------------
+Styles the h1 tag to be really big according to the user's screen
+and sets font family to "Cutive"
+--------------------------------------------------------------------
 */
 
 h1 {
 	font-size: 7.5vw;
 	font-family: 'Cutive', serif;
 }
+
+/*
+--------------------------------------------------------------------
+This is the div tag that conains all the element of the start
+animation. Will make this fade on click on start / on any
+key press
+--------------------------------------------------------------------
+*/
 
 .start {
 	background-color: #FFF0A5;
@@ -22,6 +37,12 @@ h1 {
 
   letter-spacing: 1vw;
 }
+
+/*
+--------------------------------------------------------------------
+Some arbitrary styling of the start page.
+--------------------------------------------------------------------
+*/
 
 .start-button {
 	color: white;
