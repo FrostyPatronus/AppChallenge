@@ -26,6 +26,8 @@ key press
 */
 
 #start {
+    position: fixed; /*Will make #start overlay the main page*/ 
+
     background-color: #FFF0A5;
 
     height: 100vh;
