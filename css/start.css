@@ -25,7 +25,7 @@ key press
 --------------------------------------------------------------------
 */
 
-.start {
+#start {
     background-color: #FFF0A5;
 
     height: 100vh;
@@ -45,7 +45,7 @@ Some arbitrary styling of the start page.
 --------------------------------------------------------------------
 */
 
-.start-button {
+#start-button {
     color: white;
     font-size: 36pt;
     
@@ -54,7 +54,7 @@ Some arbitrary styling of the start page.
     letter-spacing: 5vw;
 }
 
-.start-button:hover{
+#start-button:hover{
     color: white;
     box-shadow: inset 0 0 1em #B64926;
 }

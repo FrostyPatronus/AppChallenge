@@ -1,17 +1,27 @@
 Rules that ya'll need to follow when working on this project to preserve our sanity!
 
 ------- RULE NUMBER ONE: 
-	Keep all your code DRY (Do not repeat yourself):
-	https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+    Keep all your code DRY (Do not repeat yourself):
+    https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 
-	"Every piece of knowledge must have a single, unambiguous, authoritative representation within a system"	
+    "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system"   
 
 ------- RULE NUMBER TWO:
-	Do not clusterfuck all yor code into one file. Keep it into separate files.
-	"start.css" will dictate how the start page should look like. "main.css" will 
-	dictate how the main page would look like. 
+    Do not clusterfuck all yor code into one file. Keep it into separate files.
+    "start.css" will dictate how the start page should look like. "main.css" will 
+    dictate how the main page would look like. 
 
 ------- RULE NUMBER THREE:
-	Always, ALWAYS state what feature what you're going to work on in the BaseCamp before working on it
+    Always, ALWAYS state what feature what you're going to work on in the BaseCamp before working on it
 
-	This will reduce the amount of Git Merge errors we get and it's also better for teamwork and collaboration.
+    This will reduce the amount of Git Merge errors we get and it's also better for teamwork and collaboration.
+
+------- RULE NUMBER THREE:
+    ALWAYS PUT FOUR SPACES INSTEAD OF TABS!!! This will make it look better
+    on GitHub
+
+###############################################
+############## Some specifics #################
+###############################################
+
+Go to the js/constants.js file to define constants in your code
