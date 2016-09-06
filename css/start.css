@@ -13,8 +13,8 @@ and sets font family to "Cutive"
 */
 
 h1 {
-	font-size: 7.5vw;
-	font-family: 'Cutive', serif;
+    font-size: 7.5vw;
+    font-family: 'Cutive', serif;
 }
 
 /*
@@ -48,7 +48,7 @@ Some arbitrary styling of the start page.
 .start-button {
     color: white;
     font-size: 36pt;
-	
+    
     background-color: #8E2800;
     
     letter-spacing: 5vw;
