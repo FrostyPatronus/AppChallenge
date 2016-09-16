@@ -16,7 +16,7 @@ Rules that ya'll need to follow when working on this project to preserve our san
 
     This will reduce the amount of Git Merge errors we get and it's also better for teamwork and collaboration.
 
-------- RULE NUMBER THREE:
+------- RULE NUMBER FOUR:
     ALWAYS PUT FOUR SPACES INSTEAD OF TABS!!! This will make it look better
     on GitHub
 
