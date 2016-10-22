@@ -1,1 +1,4 @@
-var app = angular.module("main", []);
+$("#draggable").draggable({
+    containment: "#canvas",
+    grid: [30, 30]
+});

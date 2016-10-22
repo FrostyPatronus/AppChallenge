@@ -1,7 +1,7 @@
 Rules that ya'll need to follow when working on this project to preserve our sanity!
 
 ------- RULE NUMBER ONE: 
-    Keep all your code DRY (Do not repeat yourself):
+    Keep  all your code DRY (Do not repeat yourself):
     https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 
     "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system"   
