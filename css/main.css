@@ -3,9 +3,11 @@
 
 body {
     background-color: beige;
+    padding: 1vw;
+
 }
 
-#draggable {
+.draggable {
     width: 100px;
     height: 100px;
     border: 10px solid red;
@@ -14,5 +16,4 @@ body {
 #canvas {
     border: 10px solid black;
     height: 75vh;
-    margin: 1vw;
 }
