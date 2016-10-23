@@ -11,16 +11,15 @@
 <body>
     <div ng-controller="ClassroomController">
 
-      <div id="canvas">
-        <div ng-repeat="table in tables">
-          <table></table>
-        </div>
+      <div id="canvas" gridster>
+        <ul>
+          <li gridster-item="item" ng-repeat="item in items"></li>
+        </ul>
       </div>
       
       <button id="edit-toggle" ng-click="addTable()">
         Add tables
       </button>
-
 
     </div>
 
