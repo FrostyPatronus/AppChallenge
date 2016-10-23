@@ -9,6 +9,7 @@ function makeDraggable(){
         .resizable({
             containment: "#canvas",
             grid: [30, 30]
+
         });
 }
 
@@ -17,7 +18,7 @@ function makeDraggable(){
 
     app.controller('ClassroomController', ["$scope", function($scope){
 
-        $scope.tables = [];
+        $scope.tables = [{name: "Hello"}, {name: "Hello"}];
 
         $scope.addTable = function(){
             $scope.tables.push({

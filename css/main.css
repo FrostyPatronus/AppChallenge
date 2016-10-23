@@ -10,7 +10,15 @@ body {
 .draggable {
     width: 120px;
     height: 120px;
-    border: 10px solid red;
+    border: 10px solid transparent;
+
+    position: absolute;
+
+    -webkit-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round;
+    font-family: 'Cutive', serif;
+    font-size: 12px;
 }
 
 #canvas {
