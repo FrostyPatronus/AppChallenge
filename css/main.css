@@ -8,12 +8,14 @@ body {
 }
 
 .draggable {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border: 10px solid red;
 }
 
 #canvas {
     border: 10px solid black;
     height: 75vh;
+    background: radial-gradient(#888 1px, transparent 1px), beige;
+    background-size: 30px 30px;
 }
