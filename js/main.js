@@ -14,8 +14,8 @@
 (function() {
     var app = angular.module('ClassroomModule', []);
 
-    app.controller('ClassroomController', function($scope){
-        
+    app.controller('ClassroomController', ["$scope", function($scope){
+
         $scope.tables = [{name: "Hello"}, {name: "Hi"}];
 
         $scope.addTable = function(){
@@ -24,17 +24,13 @@
             });
         };
 
-        // angular.element(document).ready(function(){
-        //     $(".draggable")
-        //         .draggable({
-        //             containment: "#canvas",
-        //             grid: [30, 30]
-        //         })
-        //         .resizable({
-        //             grid: [30, 30]
-        //         });
-        // });
+    }]);
 
+    app.directive('table', function(){
+        return {
+            restrict: 'E',
+            templateUrl: 'html/table.html'
+        };
     });
 })();
 
