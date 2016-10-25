@@ -1,19 +1,26 @@
-$(function() {
 
-    var options = {
-        cellHeight: 80,
-        verticalMargin: 10
-    };
-    $('.grid-stack').gridstack(options);
-
-});
 
 (function() {
-    var app = angular.module('ClassroomModule', []);
+    var app = angular.module('ClassroomModule', ['gridster']);
 
     app.controller('ClassroomController', ["$scope", function($scope){
-
-        $scope.tables = [{name: "Hello"}, {name: "Hello"}];
+        
+        $scope.items = [
+            { 
+                sizeX: 2, 
+                sizeY: 1, 
+                row: 0, 
+                col: 0,
+                name: "Timothy"
+            },
+            { 
+                sizeX: 2, 
+                sizeY: 2, 
+                row: 0, 
+                col: 2,
+                name: "Test"
+            }
+        ];
 
         $scope.addTable = function(){
             $scope.tables.push({
@@ -26,10 +33,7 @@ $(function() {
     app.directive('table', function(){
         return {
             restrict: 'E',
-            templateUrl: 'html/table.html', 
-            link: function(scope, element, attr){
-                makeDraggable();
-            }
+            templateUrl: 'html/table.html'
         };
     });
 })();
