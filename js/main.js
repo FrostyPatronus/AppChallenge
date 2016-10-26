@@ -5,6 +5,17 @@
 
     app.controller('ClassroomController', ["$scope", function($scope){
         
+        $scope.options = {
+            floating: false,
+            columns: 15,
+            minRows: 6,
+
+            swapping: true,
+            margins: [15, 20],
+            outerMargin: true
+
+        };
+
         $scope.items = [
             { 
                 sizeX: 2, 
