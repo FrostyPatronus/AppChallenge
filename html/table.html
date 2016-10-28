@@ -1,8 +1,17 @@
-<ul>
-    <li gridster-item="item" 
-    ng-repeat="item in items"
+<div>
+    <div 
+    gridster-item="item" 
+    ng-repeat="table in tables"
     class="table">
-        {{item.name}}
-    </li>
-</ul>
+
+        <span class="table-name">
+          {{table.name}}
+        </span>
+
+        <span class="table-points">
+          {{table.points}}
+        </span>
+
+    </div>
+</div>
 

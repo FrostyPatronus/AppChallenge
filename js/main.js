@@ -1,41 +1,30 @@
-
-
 (function() {
     var app = angular.module('ClassroomModule', ['gridster']);
 
     app.controller('ClassroomController', ["$scope", function($scope){
-        
         $scope.options = {
             floating: false,
             columns: 15,
             minRows: 6,
-
-            swapping: true,
-            margins: [15, 20],
-            outerMargin: true
-
+            
+            swapping: true
         };
 
-        $scope.items = [
+        $scope.tables = [
             { 
-                sizeX: 2, 
-                sizeY: 1, 
-                row: 0, 
-                col: 0,
-                name: "Timothy"
+                name: "Blane",
+                points: 3
             },
             { 
-                sizeX: 2, 
-                sizeY: 2, 
-                row: 0, 
-                col: 2,
-                name: "Test"
+                name: "Test",
+                points: 3
             }
         ];
 
         $scope.addTable = function(){
             $scope.tables.push({
-                name: "Hello"
+                name: "",
+                points: 0
             });
         };
 

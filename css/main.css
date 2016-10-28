@@ -11,23 +11,56 @@ body {
     width: 90px;
     height: 90px;
     border: 10px solid transparent;
-
-    position: absolute;
-
     -webkit-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Safari 3.1-5 */
     -o-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Opera 11-12.1 */
     border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round;
+    position: absolute;
     font-family: 'Cutive', serif;
     font-size: 12px;
 }
 
 #canvas {
     height: 75vh;
-    background: radial-gradient(#888 1px, transparent 1px), beige;
+    background: radial-gradient(#888 1px, transparent 1px), #E4E0C0;
     background-size: 30px 30px;
-    background-color: white
+    background-color: #E4E0C0;
 }
 
 .container-fluid {
     padding: 10px;
+}
+
+#add-table {
+    -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    background-color:#a73f2d;
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius:7px;
+    border:1px solid #241d13;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #7a2a1d;
+}
+#add-table:hover {
+    background-color:#b34332;
+}
+#add-table:active {
+    position:relative;
+    top:1px;
+}
+
+.table-name {
+    color: green;
+}
+
+.table {
+    background-color: linear-gradient (left top, rgb(184,206,239), right bottom, rgb(157,162,182);
 }
