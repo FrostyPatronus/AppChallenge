@@ -3,10 +3,19 @@
     gridster-item="item" 
     ng-repeat="table in tables"
     class="table">
+        
 
-        <span class="table-name">
+
+        <!-- Textbox -->
+        <div ng-if="editMode == true" class="name-textbox">
+          <input type="text" name="table-name" ng-model="table.name">
+        </div>
+        
+        <!-- Table name text -->
+        <div ng-if="editMode == false" class="table-name">
           {{table.name}}
-        </span>
+        </div>
+        
 
         <span class="table-points">
           {{table.points}}

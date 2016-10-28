@@ -2,6 +2,8 @@
     var app = angular.module('ClassroomModule', ['gridster']);
 
     app.controller('ClassroomController', ["$scope", function($scope){
+        $scope.editMode = true;
+
         $scope.options = {
             floating: false,
             columns: 15,

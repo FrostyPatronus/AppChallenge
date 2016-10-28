@@ -10,7 +10,7 @@ body {
 .table {
     width: 90px;
     height: 90px;
-    border: 10px solid transparent;
+    border: 7px solid transparent;
     -webkit-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Safari 3.1-5 */
     -o-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Opera 11-12.1 */
     border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round;
@@ -21,9 +21,9 @@ body {
 
 #canvas {
     height: 75vh;
-    background: radial-gradient(#888 1px, transparent 1px), #E4E0C0;
+    background: radial-gradient(#888 1px, transparent 1px), #d4d8dc;
     background-size: 30px 30px;
-    background-color: #E4E0C0;
+    background-color: #d4d8dc;
 }
 
 .container-fluid {
@@ -58,9 +58,19 @@ body {
 }
 
 .table-name {
-    color: green;
+    color: #633e19;
+    text-align: center;
+    word-wrap: break-word;
+
 }
 
 .table {
-    background-color: linear-gradient (left top, rgb(184,206,239), right bottom, rgb(157,162,182);
+    background-image: url('http://tipshomedesign.xyz/wp-content/uploads/ktz/wooden-desk-top-view-30kfsvp0zfqva0c1s7c93e.jpg');
 }
+
+.name-input {
+    width:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;        
+}
+
