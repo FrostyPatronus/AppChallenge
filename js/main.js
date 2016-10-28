@@ -4,6 +4,16 @@
     app.controller('ClassroomController', ["$scope", function($scope){
         $scope.editMode = false;
 
+        $scope.$watch('editMode', function(newValue, oldValue) {
+            $(function(){
+                if (newValue) {
+                    $(".table-handle").css("cursor", "all-scroll");
+                } else {
+                    $(".table").css("cursor", "pointer");
+                }
+            });
+        });
+
         $scope.options = {
             floating: false,
             columns: 14,
@@ -14,7 +24,8 @@
             },
 
             draggable: {
-                enabled: false
+                enabled: false,
+                handle: ".table-handle"
             }
         };
 
@@ -41,12 +52,16 @@
             });
         };
 
+        $scope.increment = function(table) {
+            table.points += 1;
+        };
     }]);
 
     app.directive('table', function(){
         return {
             restrict: 'E',
-            templateUrl: 'html/table.html'
+            templateUrl: 'html/table.html',
+
         };
     });
 })();

@@ -1,16 +1,16 @@
 /* This is the CSS for main.html */
-/* hi this is char's part */
 
 body {
     background-color: beige;
     padding: 1vw;
-
 }
 
 .table {
+    padding-top: 5px;
+
     width: 90px;
     height: 90px;
-    border: 7px solid transparent;
+    border: 6px solid;
     -webkit-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Safari 3.1-5 */
     -o-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Opera 11-12.1 */
     border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round;
@@ -30,7 +30,14 @@ body {
     padding: 10px;
 }
 
+.bottom-buttons {
+    text-align: center;
+    margin: 10px;
+}
+
 #add-table {
+    margin-right: 10px;
+
     -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
     -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
     box-shadow:inset 0px 34px 0px -15px #b54b3a;
@@ -61,11 +68,21 @@ body {
     color: #633e19;
     text-align: center;
     word-wrap: break-word;
-
 }
 
 .table {
     background-image: url('http://tipshomedesign.xyz/wp-content/uploads/ktz/wooden-desk-top-view-30kfsvp0zfqva0c1s7c93e.jpg');
+
+    cursor: pointer;
+}
+
+.table-name, .table-points {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .name-textbox {
@@ -78,4 +95,24 @@ body {
 .table-points {
     font-size: 25pt;
     text-align: center;
+}
+
+.btn {
+       -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    background-color:#a73f2d;
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius:7px;
+    border:1px solid #241d13;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 23px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #7a2a1d;
 }

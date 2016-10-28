@@ -2,8 +2,13 @@
     <div 
     gridster-item="item" 
     ng-repeat="table in tables"
-    class="table">
+    class="table"
+    ng-click="editMode || increment(table)">
         
+        <div class="table-handle" ng-if="editMode == true">
+          Drag Handle
+        </div>
+
         <!-- Textbox -->
         <div ng-if="editMode == true">
           <input class="name-textbox" 
@@ -20,6 +25,7 @@
         <div class="table-points" ng-if="editMode == false">
           {{table.points}}
         </div>
+
 
     </div>
 </div>
