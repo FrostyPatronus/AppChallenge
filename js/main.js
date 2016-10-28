@@ -6,8 +6,8 @@
 
         $scope.options = {
             floating: false,
-            columns: 15,
-            minRows: 6,
+            columns: 12,
+            minRows: 5,
             
             swapping: true
         };
