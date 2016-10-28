@@ -4,11 +4,12 @@
     ng-repeat="table in tables"
     class="table">
         
-
-
         <!-- Textbox -->
         <div ng-if="editMode == true">
-          <input class="name-textbox" type="text" name="table-name" ng-model="table.name">
+          <input class="name-textbox" 
+          type="text" 
+          name="table-name" 
+          ng-model="table.name">
         </div>
         
         <!-- Table name text -->
@@ -16,7 +17,6 @@
           {{table.name}}
         </div>
         
-
         <div class="table-points" ng-if="editMode == false">
           {{table.points}}
         </div>

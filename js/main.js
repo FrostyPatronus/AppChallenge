@@ -6,10 +6,16 @@
 
         $scope.options = {
             floating: false,
-            columns: 12,
+            columns: 14,
             minRows: 5,
-            
-            swapping: true
+
+            resizable: {
+                enabled: false
+            },
+
+            draggable: {
+                enabled: false
+            }
         };
 
         $scope.tables = [
@@ -22,6 +28,11 @@
                 points: 3
             }
         ];
+
+        $scope.toggleEditMode = function(){
+            $scope.options.resizable.enabled = $scope.editMode;
+            $scope.options.draggable.enabled = $scope.editMode;
+        };
 
         $scope.addTable = function(){
             $scope.tables.push({
