@@ -73,12 +73,13 @@ function changeShade(table, element) {
 
         $scope.currentClass = CONST.get("NEW_CLASS_TEXT");
 
-
         $scope.headerText = $scope.currentClass;
 
         $scope.addClass = function(){
             $scope.classes[CONST.get("NEW_CLASS_TEXT")] = [];
             $scope.changeCurrentClass(CONST.get("NEW_CLASS_TEXT"));
+
+            $("#current-class-name").select();
         };
 
         $scope.renameCurrentClass = function (headerText) {
@@ -107,7 +108,7 @@ function changeShade(table, element) {
         // What executes when you add a table
         $scope.addTable = function(){
             $scope.tables.push({
-                name: "",
+                name: "New Table",
                 points: 0
             });
 
@@ -133,14 +134,14 @@ function changeShade(table, element) {
                     changeShade(table, element);
                 };
 
-                toggleTableStyle(scope.$parent.editMode);
-
                 scope.deleteTable = function(table) {
-
                     scope.$parent.tables.splice(
                         scope.$parent.tables.indexOf(table), 1);
 
                 };
+
+                toggleTableStyle(scope.$parent.editMode);
+                changeShade(scope.$parent.table, element);
             }
 
 
