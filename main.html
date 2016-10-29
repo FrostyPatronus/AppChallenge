@@ -9,10 +9,18 @@
 </head>
     
 <body>
+
     <div ng-controller="ClassroomController">
         <div id="canvas" gridster="options">
-        
-            <table></table>
+            <div 
+            gridster-item="item" 
+            ng-repeat="table in tables"
+            class="table"
+            ng-id="table-{{tableCount}}">
+
+                <table></table>
+
+            </div>
             
         </div>
         
@@ -32,10 +40,7 @@
                 ng-click="toggleEditMode()"/>
 
             </label>
-        </div>
-
-
-        
+        </div> 
     </div>
 
     <!--#include virtual="vendor/footerIncludes.html" -->

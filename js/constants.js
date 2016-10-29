@@ -20,7 +20,8 @@ type in:
 
 var CONST = (function() {
      var private = {
-        'ON_ANIMATION_END': 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+        'ON_ANIMATION_END': 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+        STEP: 75
      };
 
      return {

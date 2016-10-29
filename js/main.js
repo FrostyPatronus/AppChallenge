@@ -1,22 +1,28 @@
 function toggleTableStyle(editMode) {
     if (editMode) {
-        $(".table-handle").css("cursor", "grabbing");
         $(".table").addClass("black-border");
+        $(".table").css("cursor", "auto")
     } else {
         $(".table").css("cursor", "pointer");
         $(".table").removeClass("black-border");
     }
 }
 
-function changeShade(points) {
-    var element = $(".table-points");
-
-    var shade = 0 + (points * 25);
+function changeShade(table, element) {
+    element = $(element).find(".table-points");
+    var shade = Math.abs(0 + (table.points * CONST.get("STEP")));
 
     var rgbString = "rgb(";
-    rgbString += "0, ";
-    rgbString += shade + ", ";
-    rgbString += "0)";
+
+    if (table.points > 0) {
+        rgbString += "0, ";
+        rgbString += shade + ", ";
+        rgbString += "0)";
+    } else {
+        rgbString += shade + ",";
+        rgbString += "0, ";
+        rgbString += "0)";
+    }
 
     element.css("color", rgbString);
 }
@@ -25,6 +31,8 @@ function changeShade(points) {
     var app = angular.module('ClassroomModule', ['gridster']);
 
     app.controller('ClassroomController', ["$scope", function($scope){
+        $scope.tableCount = 0;
+
         // Determines if the app is in edit mode
         $scope.editMode = false;
 
@@ -45,7 +53,7 @@ function changeShade(points) {
 
             resizable: {
                 enabled: false,
-                handles: ["s", "e", "ne", "se", "sw"]
+                handles: ["s", "e", "se", "sw"]
             },
 
             draggable: {
@@ -73,22 +81,9 @@ function changeShade(points) {
                 points: 0
             });
 
-            $(function(){
-                toggleTableStyle($scope.editMode);
-            });
+            $scope.tableCount = $scope.tables.length;
 
         };
-
-        $scope.increment = function(table) {
-            table.points += 1;
-
-            changeShade(table.points)
-        };
-
-        $scope.decrement = function(table) {
-            table.points -= 1;
-        };
-
 
     }]);
 
@@ -97,6 +92,45 @@ function changeShade(points) {
             restrict: 'E',
             templateUrl: 'html/table.html',
 
+            link: function(scope, element, attrs) {
+                scope.increment = function(table) {
+                    table.points += 1;
+
+                    changeShade(table, element);
+                };
+
+                scope.decrement = function(table) {
+                    table.points -= 1;
+
+                    changeShade(table, element);
+                };
+
+                toggleTableStyle(scope.$parent.editMode);
+
+                scope.deleteTable = function(table) {
+
+                    scope.$parent.tables.splice(
+                        scope.$parent.tables.indexOf(table), 1);
+
+                };
+            }
+
+
+        };
+    });
+
+    app.directive('selectOnFocus', function (){
+        return {
+            restrict: "A",
+            link: function (scope, element){
+                $(element).mouseup(function(event) {
+                    event.preventDefault();
+                });
+
+                $(element).focus(function(event) {
+                    $(element).select();
+                });
+            }
         };
     });
 
@@ -111,6 +145,9 @@ function changeShade(points) {
             });
         };
     });
+
+
+
 
 })();
 
