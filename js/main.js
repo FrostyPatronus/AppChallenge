@@ -18,7 +18,7 @@ function changeShade(table, element) {
     if (table.points > 0) {
         rgbString += "0, ";
         rgbString += shade + ", ";
-        rgbString += "0)";
+        rgbString += "50)";
     } else {
         rgbString += shade + ",";
         rgbString += "0, ";
@@ -79,8 +79,21 @@ function changeShade(table, element) {
 
         };
 
+        $scope.headerText = "Volvo";
+
+        $scope.renameCurrentClass = function (headerText) {
+            $scope.classes[headerText] = $scope.classes[$scope.currentClass];
+            delete $scope.classes[$scope.currentClass];
+
+            $scope.changeCurrentClass(headerText);
+
+        };
+
         $scope.changeCurrentClass = function(newVal) {
             $scope.tables = $scope.classes[newVal];
+            $scope.headerText = newVal;
+
+            $scope.currentClass = newVal;
         };
 
         // Tables that will be shown up

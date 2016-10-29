@@ -162,6 +162,24 @@ input[type=checkbox] {
 
 }
 
+/* Current class name at the top */
+
+.class-name-wrapper {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+#current-class-name {
+    text-align: center;
+    background-color: black;
+    border: none;
+
+    font-size: 4vw;
+
+    color: white;
+
+}
+
 /* Classes used by Javascript */
 
 .black-border {

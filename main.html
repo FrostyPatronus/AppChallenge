@@ -8,14 +8,19 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
     
-<body class="animated fadeIn">
-
-    <div class="class-name-wrapper">
-        <input ng-model="currentClass" type="text">
-    </div>
+<body ng-controller="ClassroomController" class="animated fadeIn">
+    
+    <form ng-submit="renameCurrentClass(headerText)">    
+        <div class="class-name-wrapper">
+            <input ng-model="headerText" 
+                   type="text"
+                   id="current-class-name"
+                   select-on-focus>
+        </div>
+    </form>
 
     <!-- Canvas + Bottom Buttons -->
-    <div class="television" ng-controller="ClassroomController">
+    <div class="television">
         <!-- The classroom -->
         <div id="canvas" gridster="options">
 
