@@ -64,13 +64,27 @@ function changeShade(table, element) {
             }
         };
 
-        // Default tables
-        $scope.tables = [
-            { 
+        $scope.currentClass = "Volvo";
+
+        $scope.classes = {
+            "Volvo" : [{ 
                 name: "John Doe",
                 points: 0
-            }
-        ];
+            }],
+
+            "Cream" : [{ 
+                name: "John Doe",
+                points: 0
+            }]
+
+        };
+
+        $scope.changeCurrentClass = function(newVal) {
+            $scope.tables = $scope.classes[newVal];
+        };
+
+        // Tables that will be shown up
+        $scope.tables = $scope.classes[$scope.currentClass];
 
         // What executes when you toggle the Edit Mode
         $scope.toggleEditMode = function(){

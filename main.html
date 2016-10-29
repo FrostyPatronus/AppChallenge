@@ -9,10 +9,13 @@
 </head>
     
 <body class="animated fadeIn">
-    
+
+    <div class="class-name-wrapper">
+        <input ng-model="currentClass" type="text">
+    </div>
+
     <!-- Canvas + Bottom Buttons -->
     <div class="television" ng-controller="ClassroomController">
-
         <!-- The classroom -->
         <div id="canvas" gridster="options">
 
@@ -48,9 +51,17 @@
             </label>
             
             <label id="class-select-label">     
-                Change Classes:        
-                <select id="class-select">
-                    <option value="Volvo">Volvo</option>
+                Change Classes:
+
+                <select id="class-select" 
+                        ng-model="currentClass"
+                        ng-change="changeCurrentClass(currentClass)">
+                            
+                    <option value="{{class}}"
+                            ng-repeat="(class, value) in classes">
+                        {{class}}
+                    </option>
+
                 </select>
             </label>
 
