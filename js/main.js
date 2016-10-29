@@ -1,7 +1,7 @@
 function toggleTableStyle(editMode) {
     if (editMode) {
         $(".table").addClass("black-border");
-        $(".table").css("cursor", "auto")
+        $(".table").css("cursor", "auto");
     } else {
         $(".table").css("cursor", "pointer");
         $(".table").removeClass("black-border");

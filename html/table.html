@@ -1,43 +1,33 @@
-<div ng-click="editMode || increment(table)" 
-     ng-right-click="editMode || decrement(table)">
+<!-- The table's drag handle -->
+<div class="table-handle" ng-if="editMode == true">
+</div>
 
-  <!-- The table's drag handle -->
-  <div class="table-handle" ng-if="editMode == true">
-  </div>
-
-  <div class="table-delete" 
-       ng-if="editMode == true"
-       ng-click="deleteTable(table)">
-  </div>
-
-  
-  <!-- Important info of the table -->
-  <div class="table-info">
-
-    <!-- Textbox -->
-    <div ng-if="editMode == true" class="table-textbox-wrapper">
-      <input class="name-textbox" 
-      type="text" 
-      name="table-name" 
-      ng-model="table.name"
-      select-on-focus>
-    </div>
-    
-    <!-- Table name text -->
-    <div ng-if="editMode == false" class="table-name">
-      {{table.name}}
-    </div>
-    
-    <!-- Table points -->
-    <div class="table-points" ng-if="editMode == false">
-      {{table.points}}
-    </div>
-
-  </div>
-
-
+<div class="table-delete" 
+     ng-if="editMode == true"
+     ng-click="deleteTable(table)">
 </div>
 
 
+<!-- Important info of the table -->
+<div class="table-info">
 
+  <!-- Textbox -->
+  <div ng-if="editMode == true" class="table-textbox-wrapper">
+    <input class="name-textbox" 
+    type="text" 
+    name="table-name" 
+    ng-model="table.name"
+    select-on-focus>
+  </div>
+  
+  <!-- Table name text -->
+  <div ng-if="editMode == false" class="table-name">
+    {{table.name}}
+  </div>
+  
+  <!-- Table points -->
+  <div class="table-points" ng-if="editMode == false">
+    {{table.points}}
+  </div>
 
+</div>

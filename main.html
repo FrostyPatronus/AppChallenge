@@ -16,7 +16,9 @@
                  ng-repeat="table in tables"
                  ng-animate="'animation'"
                  class="table"
-                 ng-id="table-{{tableCount}}">
+                 ng-id="table-{{tableCount}}"
+                 ng-click="editMode || increment(table)" 
+                 ng-right-click="editMode || decrement(table)">
 
                 <table></table>
 
