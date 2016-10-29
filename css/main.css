@@ -49,6 +49,10 @@ input[type=checkbox] {
     padding-top: 10px;
 }
 
+.bottom-buttons * {
+    margin-right: 1vw
+}
+
 .table-button {
     margin-right: 10px;
 

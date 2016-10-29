@@ -21,7 +21,8 @@ type in:
 var CONST = (function() {
      var private = {
         'ON_ANIMATION_END': 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
-        STEP: 75
+        STEP: 75,
+        NEW_CLASS_TEXT: "New Class"
      };
 
      return {

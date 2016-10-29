@@ -39,8 +39,8 @@ function changeShade(table, element) {
         // Determines if the app is in edit mode
         $scope.editMode = false;
 
-        // Watches for changes in the scope value "editMode" and applies the new value to
-        // the DOM
+        // Watches for changes in the scope value "editMode" and applies 
+        // the new value to the DOM
         $scope.$watch('editMode', function(newValue, oldValue) {
             toggleTableStyle(newValue);
         });
@@ -64,22 +64,22 @@ function changeShade(table, element) {
             }
         };
 
-        $scope.currentClass = "Volvo";
-
-        $scope.classes = {
-            "Volvo" : [{ 
-                name: "John Doe",
-                points: 0
-            }],
-
-            "Cream" : [{ 
-                name: "John Doe",
+        $scope.classes = {"New Class": 
+            [{ 
+                name: "",
                 points: 0
             }]
-
         };
 
-        $scope.headerText = "Volvo";
+        $scope.currentClass = CONST.get("NEW_CLASS_TEXT");
+
+
+        $scope.headerText = $scope.currentClass;
+
+        $scope.addClass = function(){
+            $scope.classes[CONST.get("NEW_CLASS_TEXT")] = [];
+            $scope.changeCurrentClass(CONST.get("NEW_CLASS_TEXT"));
+        };
 
         $scope.renameCurrentClass = function (headerText) {
             $scope.classes[headerText] = $scope.classes[$scope.currentClass];
