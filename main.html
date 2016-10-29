@@ -9,14 +9,16 @@
 </head>
     
 <body class="animated fadeIn">
-
+    
+    <!-- Canvas + Bottom Buttons -->
     <div class="television" ng-controller="ClassroomController">
+
+        <!-- The classroom -->
         <div id="canvas" gridster="options">
+
             <div gridster-item="item" 
                  ng-repeat="table in tables"
-                 ng-animate="'animation'"
                  class="table"
-                 ng-id="table-{{tableCount}}"
                  ng-click="editMode || increment(table)" 
                  ng-right-click="editMode || decrement(table)">
 
@@ -26,7 +28,9 @@
             
         </div>
         
-        <div class="bottom-buttons">            
+        <!-- Buttons at the Bottom -->
+        <div class="bottom-buttons">  
+
             <button id="add-table" class="table-button" ng-click="addTable()">
                 Add tables
             </button>
@@ -42,6 +46,14 @@
                 ng-click="toggleEditMode()"/>
 
             </label>
+            
+            <label id="class-select-label">     
+                Change Classes:        
+                <select id="class-select">
+                    <option value="Volvo">Volvo</option>
+                </select>
+            </label>
+
         </div> 
     </div>
 

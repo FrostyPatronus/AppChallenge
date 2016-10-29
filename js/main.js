@@ -26,7 +26,7 @@ function changeShade(table, element) {
     }
 
     text.css("color", rgbString);
-
+    parent.parent().css("border-color", rgbString);
 
 }
 
@@ -34,7 +34,6 @@ function changeShade(table, element) {
     var app = angular.module('ClassroomModule', ['gridster', 'ngAnimate']);
 
     app.controller('ClassroomController', ["$scope", function($scope){
-
         $scope.tableCount = 0;
 
         // Determines if the app is in edit mode
@@ -99,13 +98,11 @@ function changeShade(table, element) {
             link: function(scope, element, attrs) {
                 scope.increment = function(table) {
                     table.points += 1;
-
                     changeShade(table, element);
                 };
 
                 scope.decrement = function(table) {
                     table.points -= 1;
-
                     changeShade(table, element);
                 };
 

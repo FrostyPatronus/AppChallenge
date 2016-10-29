@@ -5,13 +5,7 @@ body {
     padding: 1vw;
 }
 
-label {
-  display: block;
-  padding-left: 15px;
-  text-indent: -15px;
-}
-
-input {
+input[type=checkbox] {
   width: 13px;
   height: 13px;
   padding: 0;
@@ -25,10 +19,7 @@ input {
 .table {
     width: 90px;
     height: 90px;
-    border: 6px solid;
-    -webkit-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Safari 3.1-5 */
-    -o-border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round; /* Opera 11-12.1 */
-    border-image: url(http://images.clipartpanda.com/wood-picture-frame-clip-art-wood_frame-1056x1120.png) 30 round;
+    border: 6px solid black;
     position: absolute;
     font-family: 'Cutive', serif;
     font-size: 12px;
@@ -183,6 +174,14 @@ input {
     color: white;
     background-color:#b34332;
 
+}
+
+#class-select-label {
+    color: white;
+}
+
+#class-select {
+    color: black;
 }
 
 /* ANIMATION */
