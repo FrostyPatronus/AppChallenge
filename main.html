@@ -10,26 +10,27 @@
     
 <body>
     <div ng-controller="ClassroomController">
-        
         <div id="canvas" gridster="options">
         
             <table></table>
+            
         </div>
         
         <div class="bottom-buttons">            
-            <button id="add-table" ng-click="addTable()">
+            <button id="add-table" class="table-button" ng-click="addTable()">
                 Add tables
             </button>
 
             <!-- Checks if you can edit the tables -->
-            <label class="btn">
-                Edit Mode: &nbsp;
+            <label class="btn table-button" id="edit-toggle">
+                Edit Mode
                 <input 
                 id="edit-toggle" 
                 type="checkbox" 
                 name="edit-toggle" 
                 ng-model="editMode"
-                ng-click="toggleEditMode()">
+                ng-click="toggleEditMode()"/>
+
             </label>
         </div>
 

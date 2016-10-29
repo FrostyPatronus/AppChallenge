@@ -3,27 +3,32 @@
     gridster-item="item" 
     ng-repeat="table in tables"
     class="table"
-    ng-click="editMode || increment(table)">
+    ng-click="editMode || increment(table)"
+    ng-right-click="editMode || decrement(table)">
         
         <div class="table-handle" ng-if="editMode == true">
-          Drag Handle
         </div>
+        
+        <div class="table-info">
 
-        <!-- Textbox -->
-        <div ng-if="editMode == true">
-          <input class="name-textbox" 
-          type="text" 
-          name="table-name" 
-          ng-model="table.name">
-        </div>
-        
-        <!-- Table name text -->
-        <div ng-if="editMode == false" class="table-name">
-          {{table.name}}
-        </div>
-        
-        <div class="table-points" ng-if="editMode == false">
-          {{table.points}}
+          <!-- Textbox -->
+          <div ng-if="editMode == true">
+            <input class="name-textbox" 
+            type="text" 
+            name="table-name" 
+            ng-model="table.name">
+          </div>
+          
+          <!-- Table name text -->
+          <div ng-if="editMode == false" class="table-name">
+            {{table.name}}
+          </div>
+          
+          <!-- Table points -->
+          <div class="table-points" ng-if="editMode == false">
+            {{table.points}}
+          </div>
+
         </div>
 
 

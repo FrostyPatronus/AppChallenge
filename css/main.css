@@ -5,9 +5,23 @@ body {
     padding: 1vw;
 }
 
-.table {
-    padding-top: 5px;
+label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+input {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -3px;
+  *overflow: hidden;
+}
 
+.table {
     width: 90px;
     height: 90px;
     border: 6px solid;
@@ -17,6 +31,13 @@ body {
     position: absolute;
     font-family: 'Cutive', serif;
     font-size: 12px;
+
+    background-image: url('http://i68.tinypic.com/2cr7g1x.png');
+
+    cursor: pointer;
+    
+    position: relative;
+
 }
 
 #canvas {
@@ -32,10 +53,10 @@ body {
 
 .bottom-buttons {
     text-align: center;
-    margin: 10px;
+    background-color: black;
 }
 
-#add-table {
+.table-button {
     margin-right: 10px;
 
     -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
@@ -65,15 +86,24 @@ body {
 }
 
 .table-name {
-    color: #633e19;
+    /*color: #633e19;*/
+    color: black;
     text-align: center;
     word-wrap: break-word;
 }
 
-.table {
-    background-image: url('http://tipshomedesign.xyz/wp-content/uploads/ktz/wooden-desk-top-view-30kfsvp0zfqva0c1s7c93e.jpg');
+.table-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    cursor: pointer;
+    width: 100%;
+}
+
+.table-info input {
+    background-color: black;
+    border: 0;
 }
 
 .table-name, .table-points {
@@ -90,29 +120,39 @@ body {
     box-sizing:border-box;
     -moz-box-sizing:border-box;        
     text-align: center;
+
+    color: white;
 }
 
 .table-points {
     font-size: 25pt;
     text-align: center;
+
+    color: black;
 }
 
-.btn {
-       -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-    -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
-    box-shadow:inset 0px 34px 0px -15px #b54b3a;
-    background-color:#a73f2d;
-    -moz-border-radius:7px;
-    -webkit-border-radius:7px;
-    border-radius:7px;
-    border:1px solid #241d13;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:9px 23px;
-    text-decoration:none;
-    text-shadow:0px -1px 0px #7a2a1d;
+.edit-toggle-label{
+
+}
+
+.table-handle {
+    cursor: move;
+
+    width: 1px;
+    height: 1px;
+    border-right: 20px solid transparent;
+    border-top: 20px solid black;
+}
+
+/* Classes used by Javascript */
+
+.black-border {
+    border: 4px solid black
+}
+
+/* ID's */
+
+#edit-toggle:hover {
+    color: white;
+    background-color:#b34332;
 }
