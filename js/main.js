@@ -9,7 +9,8 @@ function toggleTableStyle(editMode) {
 }
 
 function changeShade(table, element) {
-    element = $(element).find(".table-points");
+    parent = $(element);
+    text = parent.find(".table-points");
     var shade = Math.abs(0 + (table.points * CONST.get("STEP")));
 
     var rgbString = "rgb(";
@@ -24,7 +25,9 @@ function changeShade(table, element) {
         rgbString += "0)";
     }
 
-    element.css("color", rgbString);
+    text.css("color", rgbString);
+
+
 }
 
 (function() {

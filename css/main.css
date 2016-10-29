@@ -131,6 +131,10 @@ input {
 
 }
 
+.television {
+    border: 8px solid black;
+}
+
 .table-points {
     font-size: 25pt;
     text-align: center;
@@ -181,7 +185,30 @@ input {
 
 }
 
+/* ANIMATION */
+
+/* ENTER */
+
 .table.ng-enter {
-    animation: fadeIn 0.5s;
+    animation: fadeInUp 0.5s;
 }
 
+.table-textbox-wrapper.ng-enter {
+    animation: fadeIn 0.5s
+}
+
+.table-name.ng-enter {
+    animation: fadeIn 0.5s
+}
+
+.table-points.ng-enter {
+    animation: fadeIn 0.5s
+}
+
+.table-handle.ng-enter {
+    animation: fadeIn 0.5s
+}
+
+.table-delete.ng-enter {
+    animation: fadeIn 0.5s
+}
