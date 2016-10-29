@@ -28,9 +28,10 @@ function changeShade(table, element) {
 }
 
 (function() {
-    var app = angular.module('ClassroomModule', ['gridster']);
+    var app = angular.module('ClassroomModule', ['gridster', 'ngAnimate']);
 
     app.controller('ClassroomController', ["$scope", function($scope){
+
         $scope.tableCount = 0;
 
         // Determines if the app is in edit mode

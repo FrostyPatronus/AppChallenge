@@ -8,15 +8,15 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
     
-<body>
+<body class="animated fadeIn">
 
     <div ng-controller="ClassroomController">
         <div id="canvas" gridster="options">
-            <div 
-            gridster-item="item" 
-            ng-repeat="table in tables"
-            class="table"
-            ng-id="table-{{tableCount}}">
+            <div gridster-item="item" 
+                 ng-repeat="table in tables"
+                 ng-animate="'animation'"
+                 class="table"
+                 ng-id="table-{{tableCount}}">
 
                 <table></table>
 

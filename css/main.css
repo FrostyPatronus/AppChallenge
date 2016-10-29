@@ -55,6 +55,7 @@ input {
 .bottom-buttons {
     text-align: center;
     background-color: black;
+    padding-top: 10px;
 }
 
 .table-button {
@@ -179,3 +180,8 @@ input {
     background-color:#b34332;
 
 }
+
+.table.ng-enter {
+    animation: fadeIn 0.5s;
+}
+
