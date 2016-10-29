@@ -24,8 +24,8 @@
         <!-- The classroom -->
         <div id="canvas" gridster="options">
 
-            <div gridster-item="item" 
-                 ng-repeat="table in tables"
+            <div gridster-item="table" 
+                 ng-repeat="table in tables track by $index"
                  class="table"
                  ng-click="editMode || increment(table)" 
                  ng-right-click="editMode || decrement(table)">

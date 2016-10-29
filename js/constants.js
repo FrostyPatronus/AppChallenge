@@ -22,8 +22,14 @@ var CONST = (function() {
      var private = {
         'ON_ANIMATION_END': 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
         STEP: 75,
-        NEW_CLASS_TEXT: "New Class"
-     };
+        NEW_CLASS_TEXT: "New Class",
+        NEW_TABLE: function () {
+            return jQuery.extend(true, {}, {
+                name: "New Table",
+                points: 0
+            });
+        }
+    };
 
      return {
         get: function(name) { return private[name]; }

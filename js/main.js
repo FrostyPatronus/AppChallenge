@@ -65,10 +65,7 @@ function changeShade(table, element) {
         };
 
         $scope.classes = {"New Class": 
-            [{ 
-                name: "",
-                points: 0
-            }]
+            [CONST.get("NEW_TABLE")()]
         };
 
         $scope.currentClass = CONST.get("NEW_CLASS_TEXT");
@@ -107,10 +104,7 @@ function changeShade(table, element) {
 
         // What executes when you add a table
         $scope.addTable = function(){
-            $scope.tables.push({
-                name: "New Table",
-                points: 0
-            });
+            $scope.tables.push(CONST.get("NEW_TABLE")());
 
             $scope.tableCount = $scope.tables.length;
 
