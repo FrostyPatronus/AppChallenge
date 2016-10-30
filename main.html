@@ -25,7 +25,7 @@
         <div id="canvas" gridster="options">
 
             <div gridster-item="table" 
-                 ng-repeat="table in tables track by $index"
+                 ng-repeat="table in tables"
                  class="table"
                  ng-click="editMode || increment(table)" 
                  ng-right-click="editMode || decrement(table)">
@@ -75,6 +75,23 @@
                     ng-click="addClass()">
                 Add Class
             </button>
+
+            <button id="save-session"
+                    class="table-button"
+                    ng-click="saveSession()">
+                
+                Save Session
+
+            </button>
+
+            <button id="load-session"
+                    class="table-button"
+                    ng-click="loadSession()">
+                
+                Load Session
+
+            </button>
+
 
         </div> 
     </div>

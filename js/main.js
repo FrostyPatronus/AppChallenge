@@ -110,6 +110,18 @@ function changeShade(table, element) {
 
         };
 
+        // Save and Load
+        $scope.saveSession = function() {
+            sessionStorage.classes = angular.toJson($scope.classes);
+
+        };
+
+        $scope.loadSession = function() {
+            $scope.classes = angular.fromJson(sessionStorage.classes);
+
+            $scope.changeCurrentClass(Object.keys($scope.classes)[0]);
+        };
+
     }]);
 
     app.directive('table', function(){
