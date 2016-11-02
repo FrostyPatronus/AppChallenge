@@ -10,7 +10,6 @@ function toggleTableStyle(editMode) {
 
 function changeShade(table, element) {
     parent = $(element);
-    text = parent.find(".table-points");
     var shade = Math.abs(0 + (table.points * CONST.get("STEP")));
 
     var rgbString = "rgb(";
@@ -25,7 +24,6 @@ function changeShade(table, element) {
         rgbString += "0)";
     }
 
-    text.css("color", rgbString);
     parent.parent().css("border-color", rgbString);
 
 }
@@ -112,14 +110,17 @@ function changeShade(table, element) {
 
         // Save and Load
         $scope.saveSession = function() {
-            sessionStorage.classes = angular.toJson($scope.classes);
+            localStorage.classes = angular.toJson($scope.classes);
 
+            alert("Session Stored!");
         };
 
         $scope.loadSession = function() {
-            $scope.classes = angular.fromJson(sessionStorage.classes);
+            $scope.classes = angular.fromJson(localStorage.classes);
 
             $scope.changeCurrentClass(Object.keys($scope.classes)[0]);
+
+            alert("Session Loaded!");
         };
 
     }]);

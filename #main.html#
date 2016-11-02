@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="ClassroomModule">
+<head>
+    <title>Particip8.io | main</title>
+    <!--#include virtual="vendor/headerIncludes.html" -->
+
+    <!-- LOCAL CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+    
+<body ng-controller="ClassroomController" class="animated fadeIn">
+
+    <div class="class-name-wrapper">
+        <input ng-model="headerText" 
+               type="text"
+               id="current-class-name"
+               ng-change="renameCurrentClass(headerText)"
+               select-on-focus>
+    </div>
+
+    <!-- Canvas + Bottom Buttons -->
+    <div class="television">
+
+        <!-- The classroom -->
+        <div id="canvas" gridster="options">
+
+            <div gridster-item="table" 
+                 ng-repeat="table in tables"
+                 class="table"
+                 ng-click="editMode || increment(table)" 
+                 ng-right-click="editMode || decrement(table)">
+
+                <table></table>
+
+            </div>
+            
+        </div>
+        
+        <!-- Buttons at the Bottom -->
+        <div class="bottom-buttons">  
+
+            <button id="add-table" class="table-button" ng-click="addTable()">
+                Add tables
+            </button>
+
+            <!-- Checks if you can edit the tables -->
+            <label class="btn table-button" id="edit-toggle">
+                Edit Mode
+                <input 
+                id="edit-toggle" 
+                type="checkbox" 
+                name="edit-toggle" 
+                ng-model="editMode"
+                ng-click="toggleEditMode()"/>
+
+            </label>
+            
+            <label id="class-select-label">     
+                Change Classes:
+
+                <select id="class-select" 
+                        ng-model="currentClass"
+                        ng-change="changeCurrentClass(currentClass)">
+                            
+                    <option value="{{class}}"
+                            ng-repeat="(class, value) in classes">
+                        {{class}}
+                    </option>
+
+                </select>
+            </label>
+
+            <button id="add-class" 
+                    class="table-button"
+                    ng-click="addClass()">
+                Add Class
+            </button>
+
+            <button id="save-session"
+                    class="table-button"
+                    ng-click="saveSession()">
+                
+                Save Session
+
+            </button>
+
+            <button id="load-session"
+                    class="table-button"
+                    ng-click="loadSession()">
+                
+                Load Session
+
+            </button>
+
+
+        </div> 
+    </div>
+
+    <!--#include virtual="vendor/footerIncludes.html" -->
+    <!-- Our MAIN Javascript File -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
